@@ -26,11 +26,23 @@ make a good map of the battlefield.
 </body> </p>
 
 <form method="post" action="https://script.google.com/macros/s/AKfycbxapg-VEB3M-CXMX80QLTsuFGgR9ni02cwIMXqbdCi9BVzwZBE/exec">
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+<!<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+
+<head>
+
+	<font size="4"> <font face="Arial"> <font color="Black"> Match Type </head>
+
   Match Type:
-  <input name="Match Type" id="Match Type" type="text">
+  <p style="margin-left:10em"> <input type="radio" name="Match Type" value="Practice" checked> Practice
+  <input type="radio" name="Match Type" value="Qualification" unchecked> Qualification
+  <input type="radio" name="Match Type" value="Quarterfinal" unchecked> Quarterfinal <br>
+  <input type="radio" name="Match Type" value="SemiFinal" unchecked> SemiFinal
+  <input type="radio" name="Match Type" value="Final" unchecked> Final
+  </font>
+  </p>
   <br>
-  <br>Team Number:<br>
+  Team Number:
   <input name="Team Number" id="Team Number" type="text">
   <br>
   <input type="submit" value="Submit">
