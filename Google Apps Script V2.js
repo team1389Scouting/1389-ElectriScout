@@ -12,7 +12,7 @@ function handleResponse(e) {
   var lock = LockService.getPublicLock();
   lock.waitLock(30000);  // wait 30 seconds before conceding defeat.
   Logger.log('begin to work.');
-  var sheet1 = SpreadsheetApp.openById("1SBqMj1MZ3g6JiA9IKyBysQK4nRm5FSYDbcVHi62Ep40");
+  var sheet1 = SpreadsheetApp.openById("1vSIi4vTvN2unuRytbBgmiKKYIntAS4BoaqczR2lGScA");
   Logger.log(sheet1.getUrl());
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
 
@@ -39,6 +39,9 @@ function handleResponse(e) {
           .setMimeType(ContentService.MimeType.JSON);
   } finally { //release lock
     lock.releaseLock();
+     return ContentService
+          .createTextOutput("Got it, thank you!")
+          .setMimeType(ContentService.MimeType.TEXT);
   }
 }
 //http://www.google.sc/support/forum/p/apps-script/thread?tid=345591f349a25cb4&hl=en
